@@ -72,13 +72,15 @@ public class IntListExercises {
         }
 
         IntList p = lst;
+        boolean changed = false;
         while (p != null) {
             if(Primes.isPrime(p.first)) {
                 p.first *= p.first;
+                changed = true;
             }
             p = p.rest;
         }
 
-        return true;
+        return changed;
     }
 }
